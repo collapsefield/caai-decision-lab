@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b121b">
+  <meta name="description" content="Explore how retained history can influence selection within the same permitted actions. A controlled, interactive demonstration by Collapse Aware AI™.">
+  <meta property="og:title" content="Collapse Aware AI™ — Decision Lab">
+  <meta property="og:description" content="Same present condition. Same permitted actions. Different retained history. Explore the selection boundary.">
+  <meta property="og:type" content="website">
+  <title>Decision Lab — Collapse Aware AI™</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#lab">Skip to Decision Lab</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#top" aria-label="Collapse Aware AI home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Collapse Aware AI<span class="trademark">™</span></a>
+    <nav aria-label="Main navigation"><a href="#lab">The lab</a><a href="#how-it-works">The boundary</a><a href="#about">About</a><a class="nav-contact" href="#discuss">Get in touch <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-line"></span> Interactive demonstration <span class="demo-tag">DEMO</span></p>
+        <h1 id="hero-title">Decision Lab<span class="title-dot">.</span></h1>
+        <p class="hero-subtitle">Governed selection when<br class="desktop-break"> previous events should matter.</p>
+        <p class="hero-question">When several actions are already permitted, what should govern which one actually wins?</p>
+        <p class="hero-description">The host defines what actions are allowed. Retained history may influence which permitted action is selected. The selection remains bounded, inspectable and replayable in controlled conditions.</p>
+        <div class="hero-actions"><a class="button primary" href="#lab">Enter Decision Lab <span aria-hidden="true">↗</span></a><a class="text-link" href="#how-it-works">How it works <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-diagram" aria-label="Same present condition and same permitted actions, with different histories, can lead to different governed selections.">
+        <div class="diagram-heading"><span class="eyebrow">The selection boundary</span><span class="diagram-index">01 / 03</span></div>
+        <div class="fixed-inputs"><span><i class="dot cyan"></i> Same present condition</span><span><i class="dot cyan"></i> Same permitted actions</span></div>
+        <div class="diagram-connector" aria-hidden="true"></div>
+        <div class="diagram-branches">
+          <div><span class="micro">History A</span><div class="history-lines" aria-hidden="true"><i></i><i></i><i></i></div><span class="branch-down" aria-hidden="true">↓</span><div class="diagram-action"><span>A</span>Standard reminder</div></div>
+          <div><span class="micro gold-text">History B</span><div class="history-lines gold-lines" aria-hidden="true"><i></i><i></i><i></i></div><span class="branch-down" aria-hidden="true">↓</span><div class="diagram-action selected"><span>D</span>Human review</div></div>
+        </div>
+        <div class="diagram-footer"><span class="boundary-icon" aria-hidden="true">⊏⊐</span><p>Different history.<br><strong>Same action boundary.</strong></p><span class="micro">Collections<br>demonstration</span></div>
+      </div>
+    </section>
+    <div class="principle wrap"><span class="micro">The principle</span><p>Retained history is eligible evidence,<br class="mobile-only"> <strong>not automatic authority.</strong></p><span aria-hidden="true">↓</span></div>
+
+    <section id="lab" class="lab-section wrap" aria-labelledby="lab-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / Explore the decision</p><h2 id="lab-title">Change the history.<br>Observe the selection.</h2></div><p>Choose a case. Run History A, then History B.<br>The present condition and permitted actions stay fixed.</p></div>
+      <noscript><p class="notice">Enable JavaScript to run the controlled demonstration cases. The explanation below remains available.</p></noscript>
+      <div class="scenario-tabs" role="tablist" aria-label="Decision scenario">
+        <button role="tab" id="tab-collections" aria-selected="true" aria-controls="scenario-panel" tabindex="0" data-scenario="collections"><span class="tab-index">01</span><span>Collections <small>Customer vulnerability</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+        <button role="tab" id="tab-insurance" aria-selected="false" aria-controls="scenario-panel" tabindex="-1" data-scenario="insurance"><span class="tab-index">02</span><span>Insurance <small>Claims review</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+        <button role="tab" id="tab-agent" aria-selected="false" aria-controls="scenario-panel" tabindex="-1" data-scenario="agent"><span class="tab-index">03</span><span>Stateful AI agent <small>Next-action selection</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <div id="scenario-panel" role="tabpanel" aria-labelledby="tab-collections" tabindex="0">
+        <div class="lab-grid">
+          <section class="panel input-panel" aria-labelledby="input-heading">
+            <div class="panel-top"><h3 id="input-heading">Decision input</h3><span class="micro">01</span></div>
+            <div class="input-content">
+              <div class="label-row"><h4>Present condition</h4><span class="badge">Same present condition</span></div>
+              <p id="present-condition" class="present-card"></p>
+              <h4>Host-permitted actions</h4><ol id="candidate-list" class="candidate-list"></ol>
+              <p class="field-note">CAAI selects only from this bounded candidate set.</p>
+              <div class="history-heading"><h4>Retained history</h4><span class="micro">Variable</span></div>
+              <div class="history-control" role="group" aria-label="Retained history"><button id="history-a" aria-pressed="true" data-history="A">History A</button><button id="history-b" aria-pressed="false" data-history="B">History B</button></div>
+              <ul id="history-factors" class="factor-list"></ul>
+              <div class="influence-control"><div><h4 id="influence-label">Retained-state influence</h4><p id="influence-description">Governed retained-state selection</p></div><button id="influence-toggle" class="switch" role="switch" aria-checked="true" aria-labelledby="influence-label" aria-describedby="influence-description"><span class="switch-word">ON</span><span class="switch-knob" aria-hidden="true"></span></button></div>
+              <button class="button primary run-button" id="run-selection">Run selection <span aria-hidden="true">→</span></button>
+            </div>
+          </section>
+          <section class="panel result-panel" aria-labelledby="result-heading">
+            <div class="panel-top"><h3 id="result-heading">Selection result</h3><span id="result-badge" class="badge">Awaiting selection</span></div>
+            <div id="result-content"></div>
+            <div class="selection-flow"><h4>Selection flow</h4><div class="flow-input"><i class="dot cyan"></i>Present condition <span class="micro">Fixed</span></div><div class="flow-plus" aria-hidden="true">+</div><div class="flow-input"><i class="dot cyan"></i>Permitted actions <span class="micro">Fixed</span></div><div class="flow-plus" aria-hidden="true">+</div><div class="flow-input variable"><i class="dot gold"></i><span id="flow-history">Retained history · A</span></div><div class="flow-down" aria-hidden="true">↓</div><div id="flow-output" class="flow-output">Governed selection</div></div>
+            <div class="result-actions"><button id="replay-decision" class="button secondary" disabled><span aria-hidden="true">↻</span> Replay decision</button><span id="replay-match" class="replay-message" role="status"></span></div>
+            <p class="panel-footnote">History influences selection without expanding the permitted action set.</p>
+          </section>
+          <section class="panel record-panel" aria-labelledby="record-heading"><div class="panel-top"><h3 id="record-heading">Decision record</h3><span class="record-symbol" aria-hidden="true">≡</span></div><div id="record-content"></div><p class="record-note">Decision Records expose selection evidence, not hidden model reasoning.</p></section>
+        </div>
+        <div class="comparison-invitation"><div><span class="comparison-icon" aria-hidden="true">⇄</span><p>One decision boundary. <strong>Two histories.</strong></p></div><button id="compare-toggle" class="button secondary" aria-expanded="false" aria-controls="comparison">Compare History A vs History B <span aria-hidden="true">↗</span></button></div>
+        <section id="comparison" class="comparison" aria-labelledby="comparison-title" hidden></section>
+      </div>
+      <p class="lab-caption"><span class="dot cyan" aria-hidden="true"></span> Controlled deterministic demonstration cases <span class="caption-divider" aria-hidden="true">/</span> No external model calls</p>
+      <p id="selection-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    </section>
+
+    <section id="how-it-works" class="explanation wrap" aria-labelledby="how-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / Understand the boundary</p><h2 id="how-title">Permission is one question.<br>Selection is another.</h2></div><p>Interactive Demonstration of<br>Governed Retained-State Selection</p></div>
+      <div class="explanation-grid"><article><span class="step-number">01</span><h3>The host sets the boundary.</h3><p>The present condition and host rules determine which actions are permitted. That candidate set stays fixed in each comparison.</p></article><article><span class="step-number">02</span><h3>History becomes eligible evidence.</h3><p>Relevant previous events may influence which permitted action wins. Retained history does not grant new permissions.</p></article><article><span class="step-number">03</span><h3>The selection can be inspected.</h3><p>Compare against the influence-disabled reference condition, inspect the Decision Record, then replay the same fixture result.</p></article></div>
+      <details class="did-not"><summary>What CAAI did not do <span aria-hidden="true">+</span></summary><ul><li>It did not invent new candidate actions.</li><li>It did not expand the host's permitted-action boundary.</li><li>It did not retrain the underlying model.</li><li>It did not treat retained history as automatic authority.</li><li>It did not require an external model call to perform this demonstration selection.</li><li>It did not expose proprietary scoring implementation.</li></ul></details>
+    </section>
+    <section class="stack-section wrap" aria-labelledby="stack-title"><div class="section-heading"><div><p class="eyebrow">03 / Place it in your system</p><h2 id="stack-title">A selection boundary.<br>Within your existing stack.</h2></div><p>CAAI is designed to complement existing agent and workflow infrastructure rather than replace it.</p></div><ol class="stack-flow"><li><span class="micro">State / orchestration</span><p>LangGraph / workflow / host system</p></li><li><span class="micro">Policy / permissions</span><p>Host rules / policy engine</p></li><li class="caai-layer"><span class="micro">Governed retained-state selection</span><p>Collapse Aware AI™</p></li><li><span class="micro">Validation / execution</span><p>Host / guardrails / tools</p></li></ol><p class="field-note">Named systems are examples of adjacent architecture, not statements of partnership or integration.</p></section>
+    <section id="about" class="about wrap" aria-labelledby="about-title"><div><p class="eyebrow">About the demonstration</p><h2 id="about-title">A clear view.<br>A defined scope.</h2></div><div class="about-copy"><p>Decision Lab is a buyer-safe interactive demonstration of the CAAI selection boundary. It uses controlled deterministic demonstration cases and does not execute or disclose the proprietary Core Gold runtime, private scoring implementation, thresholds or protected schemas.</p><p>The demonstrator illustrates product behaviour and evaluation concepts. Buyer-specific technical evaluation is performed separately under an agreed scope.</p><p>Decision Lab uses controlled deterministic demonstration cases to explain the CAAI selection boundary. It is not a Core Gold execution environment and should not be treated as runtime evidence.</p><p class="privacy-note">No analytics. No cookies. No telemetry. All demonstration selections run locally in your browser.</p></div></section>
+    <section id="discuss" class="cta wrap" aria-labelledby="cta-title"><p class="eyebrow">From demonstration to your decision</p><h2 id="cta-title">Have a decision like this?</h2><p>Think you have a decision like this? Send us a one-sentence description. We can help turn it into a bounded test.</p><a id="discuss-decision" class="button primary" href="mailto:collapseawareai@gmail.com?subject=Retained-State%20Decision%20Review&amp;body=Hello%2C%0A%0AWe%20have%20a%20decision%20workflow%20that%20may%20be%20relevant.%0A%0AIn%20one%20sentence%2C%20the%20decision%20is%3A%0A%5Bbrief%20description%5D%0A%0AIf%20useful%2C%20we%20can%20provide%20the%20permitted%20actions%20and%20relevant%20history%20next.%0A%0ARegards%2C%0A">Discuss a decision <span aria-hidden="true">↗</span></a><div class="email-fallback"><span id="email-address" tabindex="0">collapseawareai@gmail.com</span><button id="copy-email">Copy email</button></div><p id="copy-status" class="copy-status" role="status"></p></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="#top">Collapse Aware AI<span class="trademark">™</span></a><span>Decision Lab / Controlled demonstration</span><a href="./LICENSE_OR_NOTICE.md">Notice</a></footer>
+</body>
+</html>
