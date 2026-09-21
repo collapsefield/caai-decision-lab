@@ -1,4 +1,4 @@
-# Collapse Aware AI™ — Decision Lab
+# Collapse Aware AI — Decision Lab
 
 Buyer-safe interactive demonstrator of Governed Retained-State Selection.
 
@@ -13,7 +13,7 @@ Decision Lab demonstrates:
 - Deterministic replay.
 - Buyer-safe Decision Record.
 
-This repository contains controlled demonstration fixtures only. It does not contain or execute the proprietary Collapse Aware AI™ Core Gold runtime, private scoring logic, production thresholds or protected schemas.
+This repository contains controlled demonstration fixtures only. It does not contain or execute the proprietary Collapse Aware AI Core Gold runtime, private scoring logic, production thresholds or protected schemas.
 
 ## LOCAL
 
