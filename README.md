@@ -63,6 +63,8 @@ Scenario tabs support Left/Right Arrow, Home and End keys. History buttons, infl
 
 ## Contact
 
+**New middleware and technical enquiries:** [hello@verrellslaw.org](mailto:hello@verrellslaw.org).
+
 The CTA opens the visitor's mail application with the fixed subject **Retained-State Decision Review** and the supplied introductory body. The selectable address and Copy Email control offer a fallback. If clipboard access is unavailable, a local copy fallback is attempted; if it is also unavailable, the address is selected and manual-copy guidance appears. No message is sent by the page.
 
 ## Scope of the demonstration
