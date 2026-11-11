@@ -1,19 +1,22 @@
 # Collapse Aware AI — Decision Lab
 
-Buyer-safe interactive demonstrator of Governed Retained-State Selection.
+### Interactive, Buyer-Safe Demonstration of Governed Retained-State Selection
 
-Decision Lab demonstrates:
+[**Launch the live Decision Lab**](https://collapsefield.github.io/caai-decision-lab/) · [**View the public proof pack**](https://github.com/collapsefield/collapse-aware-ai-public-proof-pack)
 
-- Same present condition.
-- Same permitted candidate actions.
-- Different retained history.
-- Governed selection difference.
-- Retained-state influence disabled.
-- Reference comparison.
-- Deterministic replay.
-- Buyer-safe Decision Record.
+**One present decision. Two retained histories. A governed difference you can inspect.**
 
-This repository contains controlled demonstration fixtures only. It does not contain or execute the proprietary Collapse Aware AI Core Gold runtime, private scoring logic, production thresholds or protected schemas.
+| **Try** | **What it illustrates** |
+| :--- | :--- |
+| Switch between History A and History B | Candidate selection can depend on deliberately varied retained history. |
+| Disable retained-state influence | The fixed reference path is visible. |
+| Compare and replay | Review the controlled fixture decision record and deterministic output. |
+
+> **Demonstration scope:** This is a standalone browser illustration with fixed public fixtures. It does **not** run the proprietary Core Gold middleware, reproduce a customer's environment or substitute for an independent audit.
+
+**Evaluation and licensing enquiries:** [collapseawareai@gmail.com](mailto:collapseawareai@gmail.com). Scientific research on retained-state selection is separate: [Verrell’s Law](https://github.com/collapsefield/collapsefield-verrells-law).
+
+---
 
 ## LOCAL
 
